@@ -10,3 +10,8 @@ eval "$(rbenv init - bash)"
 
 eval "$(gh completion -s bash)"
 
+export HISTSIZE=10000
+export HISTFILE="$HOME/.bash_history"
+export HISTCONTROL="ignoreboth"
+export HISTTIMEFORMAT="%F %T "
+
