@@ -8,6 +8,9 @@ eval "$(nodenv init -)"
 
 eval "$(rbenv init - bash)"
 
+eval "$(goenv init -)"
+export PATH="$GOPATH/bin:$PATH"
+
 export HISTSIZE=10000
 export HISTFILE="$HOME/.bash_history"
 export HISTCONTROL="ignoreboth"
