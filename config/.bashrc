@@ -3,6 +3,7 @@ export PS1="\[\e[1;32m\]\u@\h\[\e[0m\]\[\e[1;37m\]:\[\e[0m\]\[\e[1;34m\]\w\[\e[0
 source ~/.bash_aliases
 
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 eval "$(nodenv init -)"
 
