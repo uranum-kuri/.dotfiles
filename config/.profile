@@ -18,7 +18,7 @@ PATH="$GOENV_ROOT/bin:$PATH"
 export CC
 export CXX
 export PIPENV_VENV_IN_PROJECT
-export PYRNV_ROOT
+export PYENV_ROOT
 export NODENV_ROOT
 export RBENV_ROOT
 export PATH
