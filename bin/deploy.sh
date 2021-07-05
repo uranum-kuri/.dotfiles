@@ -4,10 +4,21 @@ if [ -z "${DOT_PATH}" ]; then
   exit 1
 fi
 
+DOT_BACKUP=${DOT_PATH}/backup/$(date "+%Y%m%d_%H%M%S")
+
+mkdir -p ${DOT_BACKUP}
+
 cd ${DOT_PATH}/config
 
-for f in .??*
-do
+for f in .??* ; do
+    if [ -L ${HOME}/${f} ] ; then
+        continue
+    elif [ -f ${HOME}/${f} ] ; then
+        mv ${HOME}/${f} ${DOT_BACKUP}/.
+    elif [ -d ${HOME}/${f} ] ; then
+        mkdir ${DOT_BACKUP}/${f}
+        mv ${HOME}/${f} ${DOT_BACKUP}/${f}
+    fi
     [[ ${f} = ".git" ]] && continue
     [[ ${f} = ".gitignore" ]] && continue
     ln -snfv ${DOT_PATH}/config/${f} ${HOME}/${f}
