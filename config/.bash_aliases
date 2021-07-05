@@ -25,6 +25,6 @@ alias gw="git worktree"
 alias gl="git log --graph --oneline"
 alias glog="git log --graph -n 10"
 alias gsub="git submodule"
-alias tig="tig --all"
+alias lg="lazygit"
 alias gg="ghq get -p"
 
