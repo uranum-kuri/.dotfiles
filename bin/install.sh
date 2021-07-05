@@ -29,10 +29,12 @@ cargo install broot
 
 echo "install pyenv"
 git clone https://github.com/pyenv/pyenv $PYENV_ROOT
+git clone https://github.com/pyenv/pyenv-virtualenv $PYENV_ROOT/plugins/pyenv-virtualenv
 git clone https://github.com/pyenv/pyenv-update $PYENV_ROOT/plugins/pyenv-update
 git clone https://github.com/massongit/pyenv-pip-update $PYENV_ROOT/plugins/pyenv-pip-update
 git clone https://github.com/pyenv/pyenv-ccache $PYENV_ROOT/plugins/pyenv-ccache
 eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 
 echo "install python2"
 pyenv install 2.7.18
