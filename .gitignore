@@ -1,0 +1,8 @@
+/backup/
+/config/**
+!/config/.bash_alias
+!/config/.bash_logout
+!/config/.bash_profile
+!/config/.bashrc
+!/config/.profile
+!/config/.vimrc
