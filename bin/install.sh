@@ -9,8 +9,7 @@ source $DOT_PATH/config/.profile
 echo "install apt packages"
 sudo apt update
 sudo apt upgrade -y
-sudo apt install curl wget gcc g++ cmake make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev -y
-sudo apt install fish tmux neovim fzf clang clang-format clang-tidy gdb ccache ninja-build pkg-config -y
+sudo apt install curl wget gcc g++ cmake make fish tmux neovim fzf clang clang-format clang-tidy gdb ccache ninja-build pkg-config openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev -y
 
 echo "install rust lang"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -86,6 +85,9 @@ eval "$(rbenv init - bash)"
 echo "install ruby"
 rbenv install 3.0.1
 rbenv global 3.0.1
+
+echo "deploy dotfiles"
+source $DOT_PATH/bin/deploy.sh
 
 echo $(tput setaf 2)install complete! $(tput sgr0)
 
