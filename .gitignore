@@ -5,6 +5,7 @@
 !/config/.bash_profile
 !/config/.bashrc
 !/config/.profile
+!/config/.tmux.conf
 !/config/.vimrc
 !/config/.config/
 /config/.config/**
