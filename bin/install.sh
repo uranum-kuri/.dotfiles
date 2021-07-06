@@ -6,10 +6,13 @@ fi
 
 source $DOT_PATH/config/.profile
 
+echo "deploy dotfiles"
+source $DOT_PATH/bin/deploy.sh
+
 echo "install apt packages"
 sudo apt update
 sudo apt upgrade -y
-sudo apt install curl wget gcc g++ cmake make fish tmux neovim fzf clang clang-format clang-tidy gdb ccache ninja-build pkg-config openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev -y
+sudo apt install curl wget gcc g++ cmake make tmux neovim fzf clang clang-format clang-tidy gdb ccache ninja-build software-properties-common pkg-config openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev -y
 
 echo "install rust lang"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -86,8 +89,13 @@ echo "install ruby"
 rbenv install 3.0.1
 rbenv global 3.0.1
 
-echo "deploy dotfiles"
-source $DOT_PATH/bin/deploy.sh
+echo "install fish"
+sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo apt update
+sudo apt install fish -y
+
+echo "install fisher"
+fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
 echo $(tput setaf 2)install complete! $(tput sgr0)
 

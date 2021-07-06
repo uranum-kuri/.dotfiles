@@ -6,3 +6,10 @@
 !/config/.bashrc
 !/config/.profile
 !/config/.vimrc
+!/config/.config/
+/config/.config/**
+!/config/.config/fish/
+/config/.config/fish/**
+!/config/.config/fish/config.fish
+!/config/.config/fish/fish_plugins
+
