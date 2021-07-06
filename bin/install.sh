@@ -94,6 +94,9 @@ sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt update
 sudo apt install fish -y
 
+echo "set default shell to fish"
+sudo chsh -s $(which fish) $USER
+
 echo "install fisher"
 fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
