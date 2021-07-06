@@ -18,8 +18,6 @@ for f in .??* ; do
         mkdir -p ${DOT_BACKUP}/${f}
         mv ${HOME}/${f} ${DOT_BACKUP}/${f}
     fi
-    [[ ${f} = ".git" ]] && continue
-    [[ ${f} = ".gitignore" ]] && continue
     ln -snfv ${DOT_PATH}/config/${f} ${HOME}/${f}
 done
 
