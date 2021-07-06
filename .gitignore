@@ -4,6 +4,7 @@
 !/config/.bash_logout
 !/config/.bash_profile
 !/config/.bashrc
+!/config/.gitconfig
 !/config/.profile
 !/config/.tmux.conf
 !/config/.vimrc

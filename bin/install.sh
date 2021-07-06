@@ -29,6 +29,7 @@ cargo install starship
 cargo install procs
 cargo install pueue
 cargo install broot
+cargo install git-delta
 
 echo "install pyenv"
 git clone https://github.com/pyenv/pyenv $PYENV_ROOT
