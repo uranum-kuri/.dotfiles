@@ -10,6 +10,7 @@ set -x PATH  $HOME/.cargo/bin $PATH
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
 pyenv init --path | source
+pyenv init - | source
 
 set -x NODENV_ROOT $HOME/.nodenv
 set -x PATH  $NODENV_ROOT/bin $PATH
