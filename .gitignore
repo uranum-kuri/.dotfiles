@@ -14,4 +14,7 @@
 /config/.config/fish/**
 !/config/.config/fish/config.fish
 !/config/.config/fish/fish_plugins
+!/config/.config/lazygit/
+/config/.config/lazygit/**
+!config/.config/lazygit/config.yml
 
