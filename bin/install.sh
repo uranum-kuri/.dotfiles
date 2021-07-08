@@ -12,7 +12,7 @@ source $DOT_PATH/bin/deploy.sh
 echo "install apt packages"
 sudo apt update
 sudo apt upgrade -y
-sudo apt install curl wget gcc g++ cmake make tmux neovim fzf clang clang-format clang-tidy gdb ccache ninja-build software-properties-common pkg-config openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev -y
+sudo apt install curl wget gcc g++ cmake make tmux neovim fzf clang clang-format clang-tidy gdb ccache ninja-build software-properties-common sysstat pkg-config openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev -y
 
 echo "install rust lang"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
