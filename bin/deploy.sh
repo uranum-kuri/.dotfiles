@@ -4,7 +4,7 @@ if [ -z "${DOT_PATH}" ]; then
   exit 1
 fi
 
-DOT_BACKUP=${DOT_PATH}/backup/$(date "+%Y%m%d_%H%M%S")
+DOT_BACKUP=${DOT_PATH}/backup
 
 cd ${DOT_PATH}/config
 
