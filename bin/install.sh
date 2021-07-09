@@ -37,6 +37,7 @@ git clone https://github.com/pyenv/pyenv-update $PYENV_ROOT/plugins/pyenv-update
 git clone https://github.com/massongit/pyenv-pip-update $PYENV_ROOT/plugins/pyenv-pip-update
 git clone https://github.com/pyenv/pyenv-ccache $PYENV_ROOT/plugins/pyenv-ccache
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 echo "install python2"
 pyenv install 2.7.18
@@ -100,6 +101,14 @@ sudo chsh -s $(which fish) $USER
 
 echo "install fisher"
 fish -c "curl -sL https://git.io/fisher | source && fisher update"
+
+echo "install tmux plugins"
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+tmux start-server
+tmux new-session -d
+sleep 1
+$HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
+tmux kill-server
 
 echo $(tput setaf 2)install complete! $(tput sgr0)
 
